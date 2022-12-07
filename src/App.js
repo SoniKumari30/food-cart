@@ -1,11 +1,19 @@
-function App(){
+//import {BrowserRouter as Router,  Route} from 'react-router-dom';
+import { Routes ,Route } from 'react-router-dom';
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Navigation from "./component/Navigation";
+const App = () => {
     return(
-    <div>
+    <>
+    <Router>
+        <Navigation />
         
-            <h1>happy coding</h1>
-    <p>This is a paragraph</p>
+            <Route path = "/" component = {Home}>exact</Route>
+            <Route path = "/about" component = {About}></Route>
         
-    </div>
+    </Router>
+    </>
     )
 }
 export default App;
